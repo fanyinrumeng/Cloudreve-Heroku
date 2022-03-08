@@ -37,9 +37,6 @@ if [ ${_MODE} == ${SLAVE} ]; then
   echo -e "\n[Slave]\nSecret = ${Slave_Secret}" >> /root/cloudreve/mycloudreve.ini
 fi
 
-echo 'akashi520'|su dyno
-/usr/sbin/sshd -D &
-
 systemctl start redis-server
 /root/aria2/trackers-list-aria2.sh
 /root/cloudreve/cloudreve -c /root/cloudreve/mycloudreve.ini
