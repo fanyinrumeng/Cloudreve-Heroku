@@ -31,7 +31,7 @@ Charset = $DB_Charset
 TablePrefix = $DB_TablePrefix
 EOF
 
-if [ ${_MODE} == 'slave'];
+if [ ${_MODE} == "slave"];
 then
   echo -e "\n[Slave]\nSecret = ${Slave_Secret}" >> /root/cloudreve/mycloudreve.ini
 fi
