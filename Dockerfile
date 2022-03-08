@@ -7,7 +7,7 @@ ADD trackers-list-aria2.sh /root/aria2/trackers-list-aria2.sh
 ADD run.sh /root/cloudreve/run.sh
 
 RUN apt-get update \
-    && apt-get install wget curl aria2 redis-server -y
+    && apt-get install ssh wget curl vim neofetch aria2 redis-server -y
 
 RUN wget -qO cloudreve.tar.gz https://github.com/cloudreve/Cloudreve/releases/download/3.4.2/cloudreve_3.4.2_linux_amd64.tar.gz \
     && wget -qO /root/aria2/dht.dat https://github.com/P3TERX/aria2.conf/raw/master/dht.dat \
