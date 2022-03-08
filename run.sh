@@ -2,7 +2,7 @@
 cat <<-EOF > /root/cloudreve/mycloudreve.ini
 [System]
 ; 运行模式
-Mode = $MODE
+Mode = $_MODE
 ; 监听端口
 Listen = :${PORT}
 ; 是否开启 Debug
