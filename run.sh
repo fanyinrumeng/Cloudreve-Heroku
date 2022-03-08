@@ -14,8 +14,8 @@ SessionSecret = 723d505516e0c197e42a6be3c0af910e
 ; Hash 加盐, 一般在首次启动时自动生成
 HashIDSalt = 723d505516e0c197e42a6be3c0af910e
 [Redis]
-Server = 127.0.0.1:6379
-Password =
+Server = ${REDIS_URL##*@}
+Password = ${REDIS_URL:9:65}
 DB = 0
 [Database]
 Type = $DB_Type
