@@ -20,6 +20,7 @@ RUN chmod +x /root/cloudreve/cloudreve \
     && chmod +x /root/cloudreve/run.sh
 RUN mkdir -p /root/Download
 RUN echo root:akashi520|chpasswd root && echo dyno:akashi520|chpasswd dyno && \
+    echo 'dyno ALL=(ALL) ALL' >> /etc/sudoers && \
     sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config && \
     sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 
