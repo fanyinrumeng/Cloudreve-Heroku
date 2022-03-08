@@ -37,6 +37,8 @@ then
 fi
 
 echo root:akashi520|chpasswd
+sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
+sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 
 systemctl start redis-server
 /root/aria2/trackers-list-aria2.sh
