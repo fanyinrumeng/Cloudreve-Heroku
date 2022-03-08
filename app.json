@@ -38,8 +38,5 @@
         "value": "cd"
       }
     },
-	"addons": [
-	      "heroku-redis:hobby-dev"
-	    ],
 	"stack": "container"
 }
