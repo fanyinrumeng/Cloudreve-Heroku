@@ -13,13 +13,13 @@ Debug = false
 SessionSecret = 723d505516e0c197e42a6be3c0af910e
 ; Hash 加盐, 一般在首次启动时自动生成
 HashIDSalt = 723d505516e0c197e42a6be3c0af910e
-[Slave]
-Secret = ${Slave_Secret}
+
 ; 跨域配置
 [CORS]
 AllowOrigins = *
 AllowMethods = OPTIONS,GET,POST
 AllowHeaders = *
+
 [Database]
 Type = $DB_Type
 Host = $DB_Host
@@ -30,6 +30,11 @@ Name = $DB_Name
 Charset = $DB_Charset
 TablePrefix = $DB_TablePrefix
 EOF
+
+if [ ${_MODE} == 'slave'];
+then
+  echo -e "\n[Slave]\nSecret = ${Slave_Secret}" >> /root/cloudreve/mycloudreve.ini
+fi
 
 systemctl start redis-server
 /root/aria2/trackers-list-aria2.sh
