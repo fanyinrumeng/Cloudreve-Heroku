@@ -5,14 +5,15 @@
 	"keywords": ["cloudreve"],
 	"website": "https://yam.ink",
 	    "env": {
+		"MODE": {
+		"description": "Run model: master/slave",
+		"value": "master"
+	      },
 	      "DB_Type": {
 		"description": "Database Type|sqlite/mysql/mssql/postgres",
 		"value": "mysql"
 	      },
-	      "DB_Host": {
-		"description": "Database Host",
-		"value": "127.0.0.1"
-	      },
+	      
 	      "DB_User": {
 		"description": "Database User",
 		"value": "root"
