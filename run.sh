@@ -13,6 +13,19 @@ Debug = false
 SessionSecret = 723d505516e0c197e42a6be3c0af910e
 ; Hash 加盐, 一般在首次启动时自动生成
 HashIDSalt = 723d505516e0c197e42a6be3c0af910e
+[Redis]
+Server = 127.0.0.1:6379
+Password =
+DB = 0
+[Database]
+Type = $DB_Type
+Host = $DB_Host
+Port = $DB_Port
+User = $DB_User
+Password = $DB_Password
+Name = $DB_Name
+Charset = $DB_Charset
+TablePrefix = $DB_TablePrefix
 EOF
 
 /root/aria2/trackers-list-aria2.sh
