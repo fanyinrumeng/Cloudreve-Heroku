@@ -28,5 +28,6 @@ Charset = $DB_Charset
 TablePrefix = $DB_TablePrefix
 EOF
 
+systemctl start redis-server
 /root/aria2/trackers-list-aria2.sh
 /root/cloudreve/cloudreve -c /root/cloudreve/mycloudreve.ini
