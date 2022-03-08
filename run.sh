@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cat <<-EOF > /root/cloudreve/mycloudreve.ini
 [System]
 ; 运行模式
