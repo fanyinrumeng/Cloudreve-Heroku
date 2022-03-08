@@ -20,6 +20,9 @@ AllowOrigins = *
 AllowMethods = OPTIONS,GET,POST
 AllowHeaders = *
 
+[Slave]
+Secret = ${Slave_Secret}
+
 [Database]
 Type = $DB_Type
 Host = $DB_Host
