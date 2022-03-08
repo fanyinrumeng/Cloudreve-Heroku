@@ -2,7 +2,7 @@
 cat <<-EOF > /root/cloudreve/mycloudreve.ini
 [System]
 ; 运行模式
-Mode = slave
+Mode = $MODE
 ; 监听端口
 Listen = :${PORT}
 ; 是否开启 Debug
@@ -15,6 +15,11 @@ SessionSecret = 723d505516e0c197e42a6be3c0af910e
 HashIDSalt = 723d505516e0c197e42a6be3c0af910e
 [Slave]
 Secret = $Slave_Secret
+; 跨域配置
+[CORS]
+AllowOrigins = *
+AllowMethods = OPTIONS,GET,POST
+AllowHeaders = *
 [Database]
 Type = $DB_Type
 Host = $DB_Host
