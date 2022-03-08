@@ -20,9 +20,6 @@ AllowOrigins = *
 AllowMethods = OPTIONS,GET,POST
 AllowHeaders = *
 
-[Slave]
-Secret = ${Slave_Secret}
-
 [Database]
 Type = $DB_Type
 Host = $DB_Host
@@ -36,8 +33,7 @@ EOF
 
 SLAVE=slave
 
-if [ ${_MODE} == ${SLAVE} ];
-then
+if [ ${_MODE} == ${SLAVE} ]; then
   echo -e "\n[Slave]\nSecret = ${Slave_Secret}" >> /root/cloudreve/mycloudreve.ini
 fi
 
