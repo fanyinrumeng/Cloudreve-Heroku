@@ -39,7 +39,7 @@
 	      },
 		"Slave_Secret": {
 		"description": "Slave Secret",
-		"value": "cd"
+		"value": ""
 	      }
 	    },
 	"stack": "container"
