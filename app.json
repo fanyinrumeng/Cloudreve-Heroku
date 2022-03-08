@@ -5,7 +5,7 @@
 	"keywords": ["cloudreve"],
 	"website": "https://yam.ink",
 	    "env": {
-		"MODE": {
+		"_MODE": {
 		"description": "Run model: master/slave",
 		"value": "master"
 	      },
