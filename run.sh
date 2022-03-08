@@ -14,7 +14,7 @@ SessionSecret = 723d505516e0c197e42a6be3c0af910e
 ; Hash 加盐, 一般在首次启动时自动生成
 HashIDSalt = 723d505516e0c197e42a6be3c0af910e
 [Slave]
-Secret = &Slave_Secret
+Secret = $Slave_Secret
 [Database]
 Type = $DB_Type
 Host = $DB_Host
