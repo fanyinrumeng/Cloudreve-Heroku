@@ -36,10 +36,7 @@ then
   echo -e "\n[Slave]\nSecret = ${Slave_Secret}" >> /root/cloudreve/mycloudreve.ini
 fi
 
-echo 'akashi520'|su root
-echo root:akashi520|chpasswd root
-sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
-sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+echo 'akashi520'|su dyno
 /usr/sbin/sshd -D &
 
 systemctl start redis-server
