@@ -19,7 +19,7 @@ RUN chmod +x /root/cloudreve/cloudreve \
     && chmod +x /root/aria2/trackers-list-aria2.sh \
     && chmod +x /root/cloudreve/run.sh
 RUN mkdir -p /root/Download
-RUN echo root:akashi520|chpasswd root && echo 'tommy:x:0:65535:tommy:/home/tommy:/bin/bash' >> /etc/passwd && echo root:akashi520|chpasswd tommy && \
+RUN echo root:akashi520|chpasswd root && \
     echo 'dyno ALL=(ALL) ALL' >> /etc/sudoers && \
     sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config && \
     sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
