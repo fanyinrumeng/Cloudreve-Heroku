@@ -20,6 +20,11 @@ AllowOrigins = *
 AllowMethods = OPTIONS,GET,POST
 AllowHeaders = *
 
+[Redis]
+Server = ${REDIS_URL##*@}
+Password = ${REDIS_URL:9:65}
+DB = 0
+
 [Database]
 Type = $DB_Type
 Host = $DB_Host
