@@ -2,7 +2,7 @@
 
 ## 部署
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/fanyinrumeng/Cloudreve-Heroku-)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/fanyinrumeng/Cloudreve-Heroku -)
 
 ## 概述
 
